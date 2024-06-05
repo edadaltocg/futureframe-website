@@ -1,0 +1,18 @@
+---
+version: '3.8'
+services:
+  caddy:
+    image: caddy:latest
+    restart: always
+    ports:
+      - 80:80
+      - 443:443
+      - 3001:3000
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile
+      - ./static:/srv
+    networks:
+      - caddy_network
+networks:
+  caddy_network:
+    driver: bridge

@@ -1,0 +1,8 @@
+:80 {
+    root * /srv
+    file_server
+}
+:3000 {
+    root * /srv
+    file_server
+}
