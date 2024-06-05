@@ -13,7 +13,8 @@
   <div class="min-h-screen flex flex-col justify-center items-center container mx-auto py-12">
     <h1 class="text-4xl font-bold text-center text-gray-800">💠 Future Frame</h1>
     <!-- Waitlist form -->
-    <form id="waitlistForm" class="mt-8 flex flex-col sm:flex-row sm:w-3/4">
+    <form id="waitlistForm" class="mt-8 flex flex-col sm:flex-row sm:w-3/4"
+      action="/backend/api/collections/leads/records" method="post">
       <label for="email" class="sr-only">Email address</label>
       <input type="email" name="email" id="email" autocomplete="email" required
         class="p-1 focus:ring-green-500 focus:border-green-500 flex-1 block w-full shadow-sm sm:text-sm border-gray-300 rounded-sm placeholder-gray-500 bg-white text-gray-900"
