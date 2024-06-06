@@ -2,6 +2,7 @@
   "name": "FF's frontend",
   "version": "0.1.0",
   "description": "",
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build --emptyOutDir",

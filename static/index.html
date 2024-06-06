@@ -6,25 +6,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Future Frame</title>
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
-  <link rel="stylesheet" crossorigin href="/index-By7LUzG5.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+  <script type="module" crossorigin src="/index-CsIF6BMz.js"></script>
+  <link rel="stylesheet" crossorigin href="/index-fNCE5DMw.css">
 </head>
 
 <body>
   <div class="min-h-screen flex flex-col justify-center items-center container mx-auto py-12">
     <h1 class="text-4xl font-bold text-center text-gray-800">💠 Future Frame</h1>
     <!-- Waitlist form -->
-    <form id="waitlistForm" class="mt-8 flex flex-col sm:flex-row sm:w-3/4">
+    <form id="waitlist-form" class="mt-8 flex flex-col sm:flex-row sm:w-3/4" method="post">
       <label for="email" class="sr-only">Email address</label>
-      <input type="email" name="email" id="email" autocomplete="email" required
-        class="p-1 focus:ring-green-500 focus:border-green-500 flex-1 block w-full shadow-sm sm:text-sm border-gray-300 rounded-sm placeholder-gray-500 bg-white text-gray-900"
-        placeholder="Enter your email address">
-
-      <button type="submit"
-        class="mt-4 sm:mt-0 ml-0 sm:ml-4 w-full sm:w-auto inline-flex items-center justify-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700">Join
-        Waitlist</button>
+      <!-- <input type="email" name="email" id="email" autocomplete="email" required -->
+      <!--   class="p-1 focus:ring-green-500 focus:border-green-500 flex-1 block w-full shadow-sm sm:text-sm border-gray-300 rounded-sm placeholder-gray-500 bg-white text-gray-900" -->
+      <!--   placeholder="Enter your email address"> -->
+      <!-- <button type="submit" -->
+      <!--   class="mt-4 sm:mt-0 ml-0 sm:ml-4 w-full sm:w-auto inline-flex items-center justify-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700">Join -->
+      <!--   Waitlist</button> -->
+      <div class="min-w-0 flex-1"><label for="email" class="sr-only">Email address</label><input id="email" type="email"
+          placeholder="Enter your email"
+          class="block w-full rounded-md border-0 bg-gray-200 px-4 py-3 text-base text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-400"
+          value="" autocomplete="off" /></div>
+      <div class="mt-3 sm:mt-0 sm:ml-3"><button type="submit"
+          class="block w-full rounded-md bg-cyan-400 py-3 px-4 font-medium text-white shadow hover:bg-cyan-300 focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-offset-2 focus:ring-offset-gray-900">Join
+          Waitlist</button></div>
     </form>
-    <p id="formMessage" class="mt-4 text-center text-sm text-gray-700 hidden"></p>
+    <p id="response-message" class="mt-4 text-center text-sm text-gray-700 hidden"></p>
   </div>
 </body>
+
+<footer class="sm:flex w-full absolute bottom-0 justify-between mx-auto px-4 my-4">
+  <p class="text-gray-400">&copy; 2024 Future Frame. All rights reserved.</p>
+  <nav class="grid grid-cols-1 sm:grid-cols-2">
+  </nav>
+</footer>
 
 </html>
