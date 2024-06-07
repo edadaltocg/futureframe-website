@@ -20,16 +20,13 @@ document
         stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" class="text-gray-900">
       </path>
     </svg><span class="ml-2">Processing...</span>`;
-      const response = await fetch(
-        "http://localhost/backend/api/collections/leads/records",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ email: email }),
+      const response = await fetch("/backend/api/collections/leads/records", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
         },
-      );
+        body: JSON.stringify({ email: email }),
+      });
       // Button reset
       document.getElementById("submit").innerHTML = "Join Waitlist";
       // Button enabled
