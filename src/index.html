@@ -13,67 +13,65 @@
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 
-<body class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200">
-  <div class="min-h-screen flex flex-col justify-center items-center container mx-auto">
+<body class="flex flex-col min-h-screen space-between bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200">
+  <div class=" flex flex-col justify-center items-center container mx-auto px-4 md:px-6">
     <!-- Waitlist form -->
-    <section class="w-full py-12 md:py-24 lg:py-32 xl:py-48">
-      <div class="container px-4 md:px-6">
-        <div class="mb-16 flex flex-col items-center space-y-8 text-center">
-          <div class="space-y-4">
-            <h1
-              class="font-inter max-w-[960px] text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-medium tracking-tighter">
-              💠 Future Frame
-            </h1>
-            <p class="font-inter mx-auto max-w-[660px] text-xl text-gray-500 dark:text-gray-400">
-              Accelerate your <strong class="text-gray-600 dark:text-gray-300">data science</strong> workflow from
-              months to days with foundation models for
-              tabular data
-            </p>
-          </div>
-        </div>
-        <div class="relative font-inter w-full max-w-md space-y-2 mx-auto">
-          <p id="response-message" class="text-center text-sm hidden"></p>
-          <form id="waitlist-form" class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2">
-            <input name="email" id="email"
-              class="flex h-10 w-full rounded-md border border-gray-300 bg-white dark:bg-gray-800 dark:border-gray-700 px-3 py-2 text-sm ring-offset-gray-100 dark:ring-offset-gray-900 file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder-gray-500 dark:placeholder-gray-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-              placeholder="Enter your email" type="email" />
-            <button id="submit"
-              class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-gray-100 dark:ring-offset-gray-900 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-cyan-500 text-white hover:bg-cyan-600 h-10 px-4 py-2"
-              type="submit">
-              Join Waitlist
-            </button>
-          </form>
-          <p class="font-inter text-xs text-center text-gray-500 dark:text-gray-400">
-            Sign up to get notified when we launch.
-          </p>
-        </div>
-        <div class="relative text-center">
-          <div class="flex justify-center items-center">
-            <p class="font-inter text-sm text-gray-500 dark:text-gray-400">
-              <span class="block">In the mean time, explore our <strong>open-source</strong> library and contribute
-                to its development!</span>
-              <br />
-              <code class="text-gray-800 dark:text-gray-200">pip install futureframe</code>
-            </p>
-          </div>
-        </div>
+    <section class="w-full md:py-24 lg:py-32 xl:py-48">
+      <div class="text-center pt-32 mb-16">
+        <h1 class="font-inter text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-medium tracking-tighter mb-4">
+          💠 Future Frame
+        </h1>
+        <p class="font-inter mx-auto max-w-3xl text-xl text-gray-500 dark:text-gray-400">
+          Accelerate your data science workflow from
+          months to days with foundation models for tabular data
+        </p>
+      </div>
+      <div class="relative font-inter w-full max-w-md mx-auto space-y-4">
+        <p id="response-message" class="text-center text-sm hidden"></p>
+        <form id="waitlist-form" class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2">
+          <input name="email" id="email"
+            class="flex h-12 w-full rounded-md border border-gray-300 bg-white dark:bg-gray-800 dark:border-gray-700 px-3 py-2 text-sm placeholder-gray-500 dark:placeholder-gray-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+            placeholder="Enter your email" type="email" />
+          <button id="submit"
+            class="inline-flex items-center justify-center rounded-md text-sm font-medium bg-cyan-500 text-white hover:bg-cyan-600 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-12 min-w-32 px-4 py-2"
+            type="submit">
+            Join Waitlist
+          </button>
+        </form>
+        <p class="font-inter text-xs text-center text-gray-500 dark:text-gray-400">
+          Sign up to get notified when we launch.
+        </p>
+      </div>
+      <div class="text-center mt-28">
+        <a class="hover:text-cyan-600 transition-colors" href="https://github.com/futureframeai/futureframe">
+          <p class="font-inter text-sm text-gray-500 dark:text-gray-400">
+            <code
+              class="font-medium text-black dark:text-gray-200 bg-gradient-to-r from-fuchsia-500/5 to-cyan-500 p-2 px-4">
+              pip install futureframe
+              <i class="fa fa-external-link" aria-hidden="true"></i>
+            </code>
+        </a>
       </div>
     </section>
     <script type="module" src="js/waitlist.js"></script>
   </div>
-  <footer class="font-inter sm:flex text-s w-full justify-between items-center mx-auto px-4 my-4">
-    <p class="font-inter text-gray-500 text-xs">&copy; 2024 Future Frame. All rights reserved.
-    </p>
-    <nav class="flex justify-center space-x-6 items-center">
+  <div class="flex grow"></div>
+  <footer
+    class="grid font-inter text-gray-500 dark:text-gray-400 text-s sm:flex sm:justify-between items-center px-4 py-4">
+    <div class="flex justify-center items-center order-last sm:order-first pt-8 sm:pt-0 ">
+      <p class="text-xs">&copy; 2024 Future Frame. All rights reserved.</p>
+    </div>
+    <nav class="flex justify-center space-x-4 sm:space-x-6">
       <a href="https://github.com/futureframeai/futureframe"
-        class="text-gray-500 dark:text-gray-500 hover:text-cyan-600 inline-flex items-center space-x-2">
+        class="flex items-center space-x-2 hover:text-cyan-600 transition-colors">
         <i class="fab fa-github"></i>
         <span>Github</span>
       </a>
-      <a href="/docs" class="text-gray-500 dark:text-gray-500 hover:text-cyan-600">Docs</a>
-      <a href="/api-reference" class="text-gray-500 dark:text-gray-500 hover:text-cyan-600">API Reference</a>
+      <a href="/docs" class="hover:text-cyan-600 transition-colors">Docs</a>
+      <a href="/api-reference" class="hover:text-cyan-600 transition-colors">API Reference</a>
     </nav>
   </footer>
 </body>
+
 
 </html>
