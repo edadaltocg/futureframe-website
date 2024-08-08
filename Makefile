@@ -1,4 +1,4 @@
-.PHONY: dev build release
+.PHONY: install dev build preview release clean help
 
 VERSION = 0.1.0
 
@@ -14,6 +14,10 @@ dev:
 build:
 	npm run build
 	zip -r static.zip static
+
+# Preview the website using Vite
+preview:
+	npm run preview
 
 # Release built assets to Github
 release: build
